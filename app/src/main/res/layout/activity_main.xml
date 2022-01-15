@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="180dp"
+        android:fontFamily="monospace"
+        android:gravity="center_horizontal"
+        android:text="@string/app_name_login"
+        android:textSize="38sp" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/idField"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="50dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/idEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/user_icon"
+            android:drawablePadding="5dp"
+            android:hint="@string/txtIDHint"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck,TextContrastCheck" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/passField"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="50dp"
+        app:passwordToggleContentDescription="Show Password"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="#000000">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/passEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/password_icon"
+            android:drawablePadding="5dp"
+            android:hint="@string/txtPassHint"
+            android:inputType="textPassword"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="18dp"
+        android:width="120dp"
+        android:minWidth="100dp"
+        android:onClick="loginLast"
+        android:text="@string/btnNameLogin" />
+
+</LinearLayout>
